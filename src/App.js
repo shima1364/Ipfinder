@@ -10,12 +10,16 @@ import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import "./App.css";
 import Flag from './components/Flag';
 import Header from './components/Header';
+import SeasonDisplay from './components/sesoneDisplay';
+import moment from 'moment'
 
 const App = () => {
   const [ip, setIp] = useState('');
   const [location, setLocation] = useState({});
   const [time, setTime] = useState('');
   const [mapCenter, setMapCenter] = useState([0, 0]);
+  const [month, setMonth]= useState('');
+
   
 
   useEffect(() => {
@@ -23,6 +27,7 @@ const App = () => {
     fetch('https://api.ipify.org?format=json')
       .then(res => res.json())
       .then(data => setIp(data.ip));
+
 
     // Get the user's location and time information
     fetch('https://ipapi.co/json/')
@@ -38,6 +43,8 @@ const App = () => {
         })
         setTime(new Date().toLocaleString());
         setMapCenter([data.latitude, data.longitude]);
+        setMonth(moment().month()+1);
+        // setMonth(new Date().getMonth);
       });
   }, []);
   
@@ -61,6 +68,8 @@ const App = () => {
              <ListGroup.Item>Country: {location.country}</ListGroup.Item>
            </ListGroup>
          </Card>
+         <SeasonDisplay lat={location.lat}
+            month={month}/>
         </Col>
         <Col> 
            <div>
