@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Ipfinder/static/css/main.96a5e227.css",
+    "main.js": "/Ipfinder/static/js/main.41232b3f.js",
+    "static/js/787.658bc779.chunk.js": "/Ipfinder/static/js/787.658bc779.chunk.js",
+    "index.html": "/Ipfinder/index.html",
+    "main.96a5e227.css.map": "/Ipfinder/static/css/main.96a5e227.css.map",
+    "main.41232b3f.js.map": "/Ipfinder/static/js/main.41232b3f.js.map",
+    "787.658bc779.chunk.js.map": "/Ipfinder/static/js/787.658bc779.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96a5e227.css",
+    "static/js/main.41232b3f.js"
+  ]
+}
