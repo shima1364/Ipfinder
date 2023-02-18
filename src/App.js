@@ -53,7 +53,7 @@ const App = () => {
      <>
      <Header/>
      <br />
-     <Container className='containere' >
+     <Container className='containere floid' >
       <Row xs={2} md={4} lg={6}>
          <Col><h5>Your IP Address</h5></Col>
          <Col><h4>{ip}</h4></Col>
@@ -70,10 +70,11 @@ const App = () => {
          </Card>
          <SeasonDisplay lat={location.lat}
             month={month}/>
+            <Flag location={location.country} key={location.country}/>
         </Col>
         <Col> 
            <div>
-            <MapContainer center={mapCenter} zoom={13} scrollWheelZoom={true} className="leaflet" key={ip}>
+            <MapContainer center={mapCenter} zoom={13} scrollWheelZoom={true} className="leaflet" key={mapCenter}>
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -84,9 +85,6 @@ const App = () => {
          </Col>
       </Row>
      <Row xs="auto">
-       <Col>
-         <Flag location={location.country} key={location.country}/>
-       </Col>
      </Row>
       <Row xs="auto">
         <Col><h5>Time Information:</h5></Col>

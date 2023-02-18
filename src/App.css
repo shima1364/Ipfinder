@@ -13,11 +13,11 @@
   justify-content: center;
   border-radius: 15px;
   width: 70%;
-  height: 550px;
+  height: 40%;
   background-color: #537FE7;
   color: #E9F8F9;
 }
-.cart{margin: 2rem;}
+/* .cart{margin: 2rem;} */
 .flag{
   padding: 0;
   border-radius: 50%;
