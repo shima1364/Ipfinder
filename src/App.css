@@ -8,12 +8,10 @@
   padding: 0;
 }
 .containere{
-  margin:o 10rem 10rem 10rem;
+  margin:o 15rem 15rem 15rem;
   padding: 2rem;
   justify-content: center;
   border-radius: 15px;
-  width: 70%;
-  height: 40%;
   background-color: #537FE7;
   color: #E9F8F9;
 }

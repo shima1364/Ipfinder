@@ -75,7 +75,6 @@ const App = () => {
             <Flag  location={location.country} key={location.country}/>
         </Col>
         <Col> 
-           <div>
             <MapContainer center={mapCenter} zoom={13} scrollWheelZoom={true} className="leaflet" key={mapCenter}>
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -83,7 +82,6 @@ const App = () => {
               />
               <Marker position={mapCenter}/>   
             </MapContainer>
-            </div>
          </Col>
       </Row>
      <Row xs="auto">
