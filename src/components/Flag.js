@@ -7,7 +7,7 @@ const Flag = ({location}) => {
     useEffect(() => {
         fetch(`https://countryflagsapi.com/png/${location}`)
         .then(response => setFlag(response.url))
- 
+        .catch((err) => console.log(err))
 }, [])
 
       console.log(flag, 'test')

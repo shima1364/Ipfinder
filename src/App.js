@@ -47,22 +47,23 @@ const App = () => {
         setMapCenter([data.latitude, data.longitude]);
         setMonth(moment().month()+1);
         // setMonth(new Date().getMonth);
-      });
+      })
+      .catch((err) => console.log(err));
   }, []);
   
-
+console.log(location.country)
   return (
      <>
      <Header/>
      <br />
-     <Container className='containere floid' >
+     <Container className='container' >
       <Row xs={2} md={4} lg={6}>
          <Col><h5>Your IP Address</h5></Col>
          <Col><h4>{ip}</h4></Col>
       </Row>
       <Row xs={1} md={2}>
         <Col>
-         <Card  className='cart text-bg-primary' style={{ width: '30rem'}}>
+         <Card  className='cart text-bg-primary' >
            <ListGroup>
              <ListGroup.Item><h3>Location Info</h3></ListGroup.Item>
              <ListGroup.Item>City: {location.city}</ListGroup.Item>
@@ -86,7 +87,7 @@ const App = () => {
      <Row xs="auto">
      </Row>
       <Row xs="auto">
-        <Col><Flag  location={location.country} key={location.country}/></Col>
+        {location.country ? (<Col><Flag  location={location.country} key={location.country}/></Col>) : null}
         <Col><h5>Time Information:</h5></Col>
         <Col><p>{time}</p></Col>
       </Row>

@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function Header() {
   return (
 
-      <Navbar bg="info" variant="dark">
+      <Navbar variant="dark">
         <Container>
           <Navbar.Brand href="#home">Ip Finder</Navbar.Brand>
         </Container>
