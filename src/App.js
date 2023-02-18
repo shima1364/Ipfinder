@@ -11,7 +11,9 @@ import "./App.css";
 import Flag from './components/Flag';
 import Header from './components/Header';
 import SeasonDisplay from './components/sesoneDisplay';
-import moment from 'moment'
+import moment from 'moment';
+
+
 
 const App = () => {
   const [ip, setIp] = useState('');
@@ -70,7 +72,7 @@ const App = () => {
          </Card>
          <SeasonDisplay lat={location.lat}
             month={month}/>
-            <Flag location={location.country} key={location.country}/>
+            <Flag  location={location.country} key={location.country}/>
         </Col>
         <Col> 
            <div>

@@ -1,4 +1,7 @@
 import React from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 
 
@@ -13,12 +16,12 @@ const SeasonDisplay = (props) => {
     };
 
     const season = findSeason(props.lat, props.month);
-    const icon = season === 'Winter' ? 'snowflake' : 'sun'
+    // const icon = season === 'Winter' ? <AcUnit/> : 'sun'
 
     return(
         <div>
             {season}
-         <i className='big{icon}icon'></i>
+           {season === 'Winter' ? <AcUnitIcon/> : <WbSunnyIcon/>}
         </div>
     )
 };
