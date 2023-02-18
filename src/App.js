@@ -56,7 +56,7 @@ console.log(location.country)
      <>
      <Header/>
      <br />
-     <Container className='container' >
+     <Container className='containere' >
       <Row xs={2} md={4} lg={6}>
          <Col><h5>Your IP Address</h5></Col>
          <Col><h4>{ip}</h4></Col>
