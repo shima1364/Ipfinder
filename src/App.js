@@ -72,7 +72,6 @@ const App = () => {
          </Card>
          <SeasonDisplay lat={location.lat}
             month={month}/>
-            <Flag  location={location.country} key={location.country}/>
         </Col>
         <Col> 
             <MapContainer center={mapCenter} zoom={13} scrollWheelZoom={true} className="leaflet" key={mapCenter}>
@@ -87,6 +86,7 @@ const App = () => {
      <Row xs="auto">
      </Row>
       <Row xs="auto">
+        <Col><Flag  location={location.country} key={location.country}/></Col>
         <Col><h5>Time Information:</h5></Col>
         <Col><p>{time}</p></Col>
       </Row>

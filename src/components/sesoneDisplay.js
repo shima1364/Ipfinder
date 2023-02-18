@@ -20,8 +20,7 @@ const SeasonDisplay = (props) => {
 
     return(
         <div>
-            {season}
-           {season === 'Winter' ? <AcUnitIcon/> : <WbSunnyIcon/>}
+           {season === 'Winter' ? <AcUnitIcon style={{fontSize:100}}/> : <WbSunnyIcon style={{fontSize:100}}/>}
         </div>
     )
 };
